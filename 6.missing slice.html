@@ -1,0 +1,45 @@
+<!-- 菜菜有话说：不知道为啥diff比较有差异，但是submit的时候匹配度是100% -->
+<!-- 本题采用相对定位+border-redius的方式完成 -->
+<div></div>
+<div></div>
+<div></div>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #E3516E;
+    }
+
+    div:nth-child(1) {
+        position: relative;
+        left: 100px;
+        top: 50px;
+        width: 100px;
+        height: 100px;
+        background: #51B5A9;
+        border-radius: 100% 0 0 0;
+    }
+
+    div:nth-child(2) {
+        position: relative;
+        left: 200px;
+        top: -50px;
+        width: 100px;
+        height: 100px;
+        background: #FADE8B;
+        border-radius: 0 100% 0 0;
+    }
+
+    div:nth-child(3) {
+        position: relative;
+        left: 100px;
+        top: -50px;
+        width: 100px;
+        height: 100px;
+        background: #F7F3D7;
+        border-radius: 0 0 0 100%;
+    }
+</style>
