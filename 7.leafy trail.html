@@ -1,0 +1,51 @@
+<!--菜菜有话说：这个题还是diff肉眼有差异，但是submit匹配度是100%-->
+<!-- 思路：还是利用子绝父相，最左边的一片叶子是父元素，右边的两片都是子元素 -->
+<!-- 叶子边角的设计还是利用了border-radius来设置 -->
+<!-- border数值的确定没有啥技巧，是我一点一点调出来的（手动微笑） -->
+<div>
+    <span></span>
+    <span></span>
+</div>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #0B2429
+    }
+
+    div {
+        position: relative;
+        left: 75px;
+        top: 75px;
+        width: 150px;
+        height: 150px;
+        background: #1A4341;
+        border-radius: 67% 0 0 0;
+    }
+
+    /* 后代选择器，选中div中的第一个span，也就是中间的叶子 */
+    span:nth-child(1) {
+        position: absolute;
+        /* 相对div进行移动 */
+        left: 50px;
+        width: 150px;
+        height: 150px;
+        background: #998235;
+        border-radius: 67% 0 67% 0;
+    }
+
+    /* 后代选择器，选中div中的第二个span，也就是最后一篇叶子 */
+    span:nth-child(2) {
+        position: absolute;
+        /* 相对div进行移动 */
+        left: 100px;
+        width: 150px;
+        height: 150px;
+        background: #F3AC3C;
+        border-radius: 67% 0 67% 0;
+    }
+</style>
