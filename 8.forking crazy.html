@@ -1,0 +1,62 @@
+<!-- 本题不采用定位的方式（太麻烦），而是采用flex布局，配合上box-shadow的方式来解决问题 -->
+<div class='fork'>
+    <div class="fork_spike">
+    </div>
+    <div class='fork_body'>
+    </div>
+    <div class="fork_handle">
+    </div>
+</div>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #6592CF;
+    }
+
+    .fork {
+        display: flex;
+        /* 主轴为垂直方向 */
+        flex-direction: column;
+        /* 设置元素排列规则 */
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+    }
+
+    .fork_spike {
+        height: 110px;
+        width: 20px;
+        background: #6592CF;
+        border-radius: 10px 10px;
+        /*以一个spike为轴，以阴影的形式显示出其他spiike*/
+        box-shadow:
+            -60px 0 #060F55,
+            -40px 0 #6592CF,
+            -20px 0 #060F55,
+            20px 0 #060F55,
+            40px 0 #6592CF,
+            60px 0 #060F55;
+        /*沿着y轴下移10px，为了显示出圆角*/
+        transform: translateY(10px)
+    }
+
+    .fork_body {
+        /* 半圆要求高是宽的一半，但是此处不是半圆 */
+        height: 100px;
+        width: 140px;
+        border-radius: 0 0 70px 70px;
+        background: #060F55;
+        /* 为了fork_body的底部贴合fork_handle */
+        margin-bottom: -1px;
+    }
+
+    .fork_handle {
+        height: 51px;
+        width: 20px;
+        background: #060F55;
+    }
+</style>
