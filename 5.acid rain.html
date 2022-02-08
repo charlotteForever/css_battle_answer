@@ -1,0 +1,65 @@
+<div class='first'>
+    <div>
+        <span></span>
+    </div>
+    <div>
+        <span></span>
+    </div>
+</div>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #0B2429;
+    }
+
+    .first {
+        position: relative;
+        left: 200px;
+        top: 30px;
+        width: 120px;
+        height: 120px;
+        background: #F3AC3C;
+        border-radius: 50%;
+    }
+
+    .first div:nth-child(1) {
+        position: absolute;
+        right: 60px;
+        top: 60px;
+        width: 120px;
+        height: 120px;
+        background: #998235;
+        border-radius: 50%;
+    }
+
+    /*是相对 div:nth-child(1)进行定位的*/
+    .first div:nth-child(1) span {
+        position: absolute;
+        left: 60px;
+        width: 60px;
+        height: 60px;
+        background: #998235;
+    }
+
+    .first div:nth-child(2) {
+        position: absolute;
+        right: 120px;
+        top: 120px;
+        width: 120px;
+        height: 120px;
+        background: #F3AC3C;
+        border-radius: 50%;
+    }
+
+    .first div:nth-child(2) span {
+        position: absolute;
+        left: 60px;
+        width: 60px;
+        height: 60px;
+        background: #F3AC3C;
+    }
+</style>
